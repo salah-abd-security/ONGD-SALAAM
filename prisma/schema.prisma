@@ -22,6 +22,7 @@ model Setting {
   phone        String
   email        String
   whatsapp     String
+  whatsappChannel String @default("")
   linkedin     String
   updatedAt    DateTime @updatedAt
 }

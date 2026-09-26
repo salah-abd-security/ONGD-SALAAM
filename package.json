@@ -13,6 +13,7 @@
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "jose": "^6.1.0",
+    "mammoth": "^1.12.3",
     "next": "^15.5.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
