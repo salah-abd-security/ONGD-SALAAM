@@ -46,112 +46,56 @@ export type NewsPost = {
 
 export const defaultSettings: Settings = {
   orgName: "ONGD SALAAM",
-  tagline: "Organisation Non Gouvernementale de Développement — pour la paix et le développement communautaire",
+  tagline: "Protection, bâtir la paix, l’éducation, action humanitaire et développement communautaire",
   heroTitle: "Ensemble pour la paix et le développement au Nord-Ubangi",
   heroSubtitle:
-    "ONGD SALAAM œuvre auprès des communautés de Gbadolite et du Nord-Ubangi pour promouvoir la paix, la solidarité et un développement durable et inclusif.",
+    "ONGD SALAAM accompagne les jeunes, les femmes et les hommes de Gbadolite et du Nord-Ubangi à travers des actions de protection, de paix, d’éducation, d’aide humanitaire et de développement communautaire.",
   mission:
-    "ONGD SALAAM a pour mission de contribuer au mieux-être des populations du Nord-Ubangi en promouvant la paix, la cohésion sociale et le développement communautaire durable, à travers des actions de terrain menées avec et pour les communautés.",
+    "ONGD SALAAM accompagne les communautés du Nord-Ubangi, en particulier les personnes vulnérables, déplacées et réfugiées, à travers des actions de protection, de paix et de cohésion sociale, d’action humanitaire, d’éducation et de développement communautaire.",
   vision:
-    "Une société apaisée, solidaire et prospère, où chaque personne — en particulier les plus vulnérables — dispose des moyens de vivre dignement et de participer au développement de sa communauté.",
+    "Contribuer à des communautés plus pacifiques, solidaires, inclusives et capables de construire durablement leur avenir.",
   values:
-    "Paix • Solidarité • Intégrité • Transparence • Respect de la dignité humaine • Engagement communautaire",
+    "Paix • Solidarité • Intégrité • Respect de la dignité humaine • Engagement communautaire",
   address: "Gbadolite",
   city: "Gbadolite",
   region: "Province du Nord-Ubangi, République Démocratique du Congo",
-  phone: "",
-  email: "",
-  whatsapp: "",
-  linkedin: "",
+  phone: "+243 828 382 289",
+  email: "ongdsalaamgbadolite@gmail.com",
+  whatsapp: "https://whatsapp.com/channel/0029VbCkAHQ9WtBygpQFIN2N",
+  linkedin: "https://www.linkedin.com/in/ongd-salaam-385b1b437",
 }
 
 export const defaultDomains: Domain[] = [
-  {
-    id: 1,
-    title: "Paix et cohésion sociale",
-    description:
-      "Promotion du dialogue, prévention des conflits et renforcement du vivre-ensemble au sein des communautés.",
-    icon: "peace",
-    position: 1,
-  },
-  {
-    id: 2,
-    title: "Développement communautaire",
-    description:
-      "Appui aux initiatives locales et accompagnement des communautés dans la conduite de projets de développement.",
-    icon: "community",
-    position: 2,
-  },
-  {
-    id: 3,
-    title: "Éducation et formation",
-    description:
-      "Sensibilisation, encadrement et renforcement des capacités des jeunes et des acteurs communautaires.",
-    icon: "education",
-    position: 3,
-  },
-  {
-    id: 4,
-    title: "Santé et action sociale",
-    description:
-      "Actions de promotion de la santé, de solidarité et d'assistance aux personnes vulnérables.",
-    icon: "health",
-    position: 4,
-  },
-  {
-    id: 5,
-    title: "Environnement et agriculture",
-    description:
-      "Promotion de pratiques durables, protection de l'environnement et soutien aux activités agricoles.",
-    icon: "leaf",
-    position: 5,
-  },
-  {
-    id: 6,
-    title: "Autonomisation des femmes et des jeunes",
-    description:
-      "Appui à l'entrepreneuriat, à l'inclusion et à la participation des femmes et des jeunes.",
-    icon: "empower",
-    position: 6,
-  },
+  { id: 1, title: "Protection", description: "Actions de protection et accompagnement des personnes vulnérables.", icon: "peace", position: 1 },
+  { id: 2, title: "Paix et cohésion sociale", description: "Promotion du dialogue, de la paix et du vivre-ensemble au sein des communautés.", icon: "peace", position: 2 },
+  { id: 3, title: "Action humanitaire", description: "Assistance et accompagnement des personnes vulnérables, déplacées et réfugiées.", icon: "health", position: 3 },
+  { id: 4, title: "Éducation", description: "Actions en faveur de l’éducation et du renforcement des capacités des jeunes et des communautés.", icon: "education", position: 4 },
+  { id: 5, title: "Développement communautaire", description: "Appui aux initiatives locales et contribution au développement durable du Nord-Ubangi.", icon: "community", position: 5 },
 ]
 
 export const defaultTeam: TeamMember[] = [
-  {
-    id: 1,
-    name: "Le Président",
-    role: "Président de l'ONGD SALAAM",
-    bio: "Biographie complète à compléter via l'espace d'administration.",
-    photoUrl: "/images/president.png",
-    position: 1,
-  },
-  {
-    id: 2,
-    name: "Awa Yongo Madina",
-    role: "Membre de l'équipe",
-    bio: "Fonction et biographie à compléter via l'espace d'administration.",
-    photoUrl: "/images/awa-yongo-madina.png",
-    position: 2,
-  },
-  {
-    id: 3,
-    name: "Salahadine",
-    role: "Membre de l'équipe",
-    bio: "Fonction et biographie à compléter via l'espace d'administration.",
-    photoUrl: "/images/salahadine.png",
-    position: 3,
-  },
+  { id: 1, name: "MAHAMAT ADAM SALEH", role: "Président", bio: "", photoUrl: "/images/president.png", position: 1 },
+  { id: 2, name: "ADAM SATO Abakar", role: "Vice-président", bio: "", photoUrl: "", position: 2 },
+  { id: 3, name: "AWA YONGO Madina", role: "Trésorière", bio: "", photoUrl: "/images/awa-yongo-madina.png", position: 3 },
+  { id: 4, name: "MOUSSA ABAKAR Sato", role: "Secrétaire exécutif", bio: "", photoUrl: "", position: 4 },
+  { id: 5, name: "MOLULI MOKWETI Ibrahim", role: "Secrétaire exécutif adjoint", bio: "", photoUrl: "", position: 5 },
+  { id: 6, name: "MBALO TOBIMBE Alain", role: "Conseiller du développement", bio: "", photoUrl: "", position: 6 },
+  { id: 7, name: "ABDASSAMAD SATO Abakar", role: "Conseiller religieux", bio: "", photoUrl: "", position: 7 },
+  { id: 8, name: "OUSMAN ADAM Abdel", role: "Commissaire aux comptes", bio: "", photoUrl: "", position: 8 },
+  { id: 9, name: "SALAHADINE ABDASSAMAD", role: "Inspecteur Générale", bio: "", photoUrl: "/images/salahadine.png", position: 9 },
+  { id: 10, name: "MBIMBA LITA Adrien", role: "Secrétaire rapporteur", bio: "", photoUrl: "", position: 10 },
+  { id: 11, name: "GBANZI", role: "Comptable", bio: "", photoUrl: "", position: 11 },
 ]
 
 export const defaultNews: NewsPost[] = [
   {
     id: 1,
-    title: "Bienvenue sur le site officiel d'ONGD SALAAM",
+    title: "Bienvenue sur le site officiel d’ONGD SALAAM",
     date: new Date().toISOString(),
     excerpt:
-      "Découvrez notre mission, nos domaines d'intervention et notre équipe. Les actualités et projets seront publiés au fil des activités.",
+      "Découvrez la mission, les domaines d’intervention et l’équipe de l’ONGD SALAAM. Les projets et actualités seront publiés progressivement.",
     body:
-      "Ce site présente l'ONGD SALAAM et son action au service des communautés du Nord-Ubangi. Les actualités, projets et documents officiels seront ajoutés progressivement via l'espace d'administration.",
+      "Ce site présente l’ONGD SALAAM et ses domaines d’action dans le Nord-Ubangi. Les projets, actualités et documents officiels pourront être ajoutés progressivement depuis l’espace d’administration.",
     imageUrl: "/images/office-activity.png",
     published: true,
   },
@@ -162,22 +106,7 @@ export async function getSettings(): Promise<Settings> {
   try {
     const row = await prisma.setting.findUnique({ where: { id: 1 } })
     if (!row) return defaultSettings
-    return {
-      orgName: row.orgName,
-      tagline: row.tagline,
-      heroTitle: row.heroTitle,
-      heroSubtitle: row.heroSubtitle,
-      mission: row.mission,
-      vision: row.vision,
-      values: row.values,
-      address: row.address,
-      city: row.city,
-      region: row.region,
-      phone: row.phone,
-      email: row.email,
-      whatsapp: row.whatsapp,
-      linkedin: row.linkedin,
-    }
+    return { ...row }
   } catch {
     return defaultSettings
   }
