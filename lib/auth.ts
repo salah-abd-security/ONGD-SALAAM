@@ -2,7 +2,7 @@ import { cookies } from "next/headers"
 import { SignJWT, jwtVerify } from "jose"
 
 const COOKIE_NAME = "salaam_admin_session"
-const SESSION_DURATION = 60 * 60 * 8 // 8 hours (seconds)
+const SESSION_DURATION = 60 * 60 * 8
 
 function getSecretKey(): Uint8Array {
   const secret = process.env.ADMIN_SECRET || "salaam-development-only-secret-change-me"
@@ -15,8 +15,7 @@ export function isAdminConfigured(): boolean {
 
 export function verifyPassword(password: string): boolean {
   const expected = process.env.ADMIN_PASSWORD
-  if (!expected) return false
-  return password === expected
+  return Boolean(expected) && password === expected
 }
 
 export async function createSession(): Promise<void> {
@@ -29,7 +28,7 @@ export async function createSession(): Promise<void> {
   const cookieStore = await cookies()
   cookieStore.set(COOKIE_NAME, token, {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/",
     maxAge: SESSION_DURATION,
