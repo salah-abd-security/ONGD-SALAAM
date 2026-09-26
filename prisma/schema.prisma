@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Setting {
+  id           Int      @id @default(1)
+  orgName      String
+  tagline      String
+  heroTitle    String
+  heroSubtitle String
+  mission      String
+  vision       String
+  values       String
+  address      String
+  city         String
+  region       String
+  phone        String
+  email        String
+  whatsapp     String
+  linkedin     String
+  updatedAt    DateTime @updatedAt
+}
+
+model TeamMember {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  bio       String   @default("")
+  photoUrl  String   @default("")
+  position  Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Domain {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String @default("")
+  icon        String @default("leaf")
+  position    Int    @default(0)
+}
+
+model NewsPost {
+  id        Int      @id @default(autoincrement())
+  title     String
+  date      DateTime @default(now())
+  excerpt   String   @default("")
+  body      String   @default("")
+  imageUrl  String   @default("")
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
