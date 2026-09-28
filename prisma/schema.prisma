@@ -1,0 +1,11 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+
+model SiteSetting { id Int @id @default(autoincrement()); key String @unique; value String @db.Text; updatedAt DateTime @updatedAt }
+model TeamMember { id Int @id @default(autoincrement()); name String; role String; bio String? @db.Text; imageUrl String?; order Int @default(0); active Boolean @default(true); createdAt DateTime @default(now()); updatedAt DateTime @updatedAt }
+model Action { id Int @id @default(autoincrement()); title String; description String @db.Text; icon String?; order Int @default(0); active Boolean @default(true); createdAt DateTime @default(now()); updatedAt DateTime @updatedAt }
+model News { id Int @id @default(autoincrement()); title String; excerpt String @db.Text; content String? @db.Text; imageUrl String?; publishedAt DateTime @default(now()); active Boolean @default(true); createdAt DateTime @default(now()); updatedAt DateTime @updatedAt }
+model Project { id Int @id @default(autoincrement()); title String; summary String @db.Text; description String? @db.Text; status String @default("En préparation"); imageUrl String?; startDate DateTime?; endDate DateTime?; active Boolean @default(true); createdAt DateTime @default(now()); updatedAt DateTime @updatedAt }
+model GalleryItem { id Int @id @default(autoincrement()); title String; imageUrl String; caption String? @db.Text; eventDate DateTime?; active Boolean @default(true); createdAt DateTime @default(now()) }
+model Document { id Int @id @default(autoincrement()); title String; description String? @db.Text; url String; category String @default("Document"); publishedAt DateTime @default(now()); active Boolean @default(true) }
+model SocialLink { id Int @id @default(autoincrement()); label String; url String; icon String?; order Int @default(0); active Boolean @default(true) }
